@@ -1,3 +1,10 @@
+variable "api_url" {
+  default = "https://console.ves.volterra.io/api"
+}
+
+variable "api_p12_file" {
+}
+
 variable "aws_key_name" { default = "svk-aws-keys" }
 variable "aws_region" { default = "ap-southeast-2" }
 variable "aws_instance_type" { default = "t3.2xlarge" }

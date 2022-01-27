@@ -1,8 +1,8 @@
 provider "volterra" {
 #  api_p12_file     = "/root/f5-sa.console.ves.volterra.io.api-creds.p12"
 #  url              = "https://f5-sa.console.ves.volterra.io/api"
-  api_p12_file     = "/root/f5-sales-public.console.ves.volterra.io.api-creds.p12"
-  url              = "https://f5-sales-public.console.ves.volterra.io/api"
+  api_p12_file     = var.api_p12_file
+  url              = var.api_url
   timeout          = "120s"
 }
 
