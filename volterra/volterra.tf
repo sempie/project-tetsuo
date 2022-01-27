@@ -127,6 +127,9 @@ resource "volterra_k8s_cluster" "example" {
   }
   // One of the arguments from this list "use_default_psp use_custom_psp_list" must be set
   use_default_psp = true
+
+  // One of the arguments from this list "cluster_scoped_access_permit cluster_scoped_access_deny" must be set
+  cluster_scoped_access_permit = true 
 }
 
 resource "volterra_tf_params_action" "ce" {

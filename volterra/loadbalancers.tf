@@ -71,6 +71,16 @@ resource "volterra_http_loadbalancer" "app" {
   service_policies_from_namespace = true
   no_challenge                    = true
 
+  // One of the arguments from this list "single_lb_app multi_lb_app" must be set
+  single_lb_app	{
+    disable_discovery = true
+    disable_ddos_detection = true
+    disable_malicious_user_detection = true
+  }
+
+  // One of the arguments from this list "user_id_client_ip user_identification" must be set
+  user_id_client_ip = true
+
   depends_on = [ time_sleep.ns_wait, volterra_tcp_loadbalancer.unit-config ]
 }
 
