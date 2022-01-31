@@ -99,7 +99,8 @@ resource "volterra_aws_vpc_site" "ce" {
 }
 
 resource "volterra_k8s_cluster" "example" {
-  name      = "svk-k8s"
+  #name      = "svk-k8s"
+  name	    = var.k8sname
   namespace = "system"
 
   // One of the arguments from this list "cluster_wide_app_list no_cluster_wide_apps" must be set

@@ -20,6 +20,7 @@ variable "ns" { default = "s-vankalken" }
 variable "domain_host" { default = "svk-unit-demo" }
 #variable "domain" { default = "sa.f5demos.com" }
 variable "domain" { default = "sales-public.f5demos.com" }
+variable "k8sname" { default = "svk-k8s" }
 variable "servicename" { default = "svk-unit" }
 variable "unit_config_port" { default = "8888" }
 
